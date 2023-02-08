@@ -5,7 +5,7 @@ public class Employee {
     private String department;
     private double salary;
     private int id;
-    private static int counter;
+    private static int counter = 1;
 
     public Employee(String surname, String name, String patronymic, String department, double salary) {
         this.name = name;
@@ -50,13 +50,9 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee{" +
-                "surname='" + surname + '\'' +
-                ", name='" + name + '\'' +
-                ", patronymic='" + patronymic + '\'' +
-                ", department='" + department + '\'' +
-                ", salary=" + salary +
-                ", id=" + id +
-                '}';
+        return  "ФИО: " + surname + " " + name + " " + patronymic +
+                " Отдел: " + department +
+                " Зарплата: " + salary +
+                " ID: " + id;
     }
 }
