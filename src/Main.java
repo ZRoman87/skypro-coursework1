@@ -30,12 +30,12 @@ public class Main {
         System.out.println();
 
         System.out.println("Сотрудник с минимальной зарплатой:");
-        System.out.println(employees[getEmployeeWithMinSalary(employees)].toString());
+        System.out.println(getEmployeeWithMinSalary(employees));
 
         System.out.println();
 
         System.out.println("Сотрудник с максимальной зарплатой:");
-        System.out.println(employees[getEmployeeWithMaxSalary(employees)].toString());
+        System.out.println(getEmployeeWithMaxSalary(employees));
 
         System.out.println();
 
@@ -69,7 +69,7 @@ public class Main {
         return sum;
     }
 
-    public static int getEmployeeWithMinSalary(Employee[] employees) {
+    public static Employee getEmployeeWithMinSalary(Employee[] employees) {
         double min = Double.MAX_VALUE;
         int index = 0;
 
@@ -79,10 +79,10 @@ public class Main {
                 index = i;
             }
         }
-        return index;
+        return employees[index];
     }
 
-    public static int getEmployeeWithMaxSalary(Employee[] employees) {
+    public static Employee getEmployeeWithMaxSalary(Employee[] employees) {
         double max = Double.MIN_VALUE;
         int index = 0;
 
@@ -92,7 +92,7 @@ public class Main {
                 index = i;
             }
         }
-        return index;
+        return employees[index];
     }
 
     public static int getEmployeesAmount(Employee[] employees) {
