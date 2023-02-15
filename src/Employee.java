@@ -55,4 +55,10 @@ public class Employee {
                 " Зарплата: " + salary +
                 " ID: " + id;
     }
+
+    public String toString(String department) {
+        return  "ФИО: " + surname + " " + name + " " + patronymic +
+                " Зарплата: " + salary +
+                " ID: " + id;
+    }
 }
