@@ -1,5 +1,8 @@
+package basic_and_incr_complex;
+
 public class Main {
     static Employee[] employees = new Employee[10];
+
     public static void main(String[] args) {
 
         employees[0] = new Employee("Иванов", "Иван", "Иванович", "1", 10_000);
