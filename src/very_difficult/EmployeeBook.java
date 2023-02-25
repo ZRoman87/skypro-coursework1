@@ -9,58 +9,46 @@ public class EmployeeBook {
         for (int i = 0; i < employees.length; i++) {
             if (employees[i] == null) {
                 employees[i] = new Employee(surname, name, patronymic, department, salary);
-                break;
-            } else {
-                if (i == (employees.length - 1)) {
-                    System.out.println("ОШИБКА: Книга заполнена");
-                }
+                return;
             }
         }
+        System.out.println("ОШИБКА: Книга заполнена");
     }
 
     // Удаление сотрудника
     public void removeEmployee(String surname, String name, String patronymic) {
         for (int i = 0; i < employees.length; i++) {
-            if (employees[i].getSurname().equals(surname) & employees[i].getName().equals(name) && employees[i].getPatronymic().equals(patronymic)) {
+            if (employees[i] != null & employees[i].getSurname().equals(surname) & employees[i].getName().equals(name) && employees[i].getPatronymic().equals(patronymic)) {
                 employees[i] = null;
                 System.out.println("Сотрудник " + surname + " " + name + " " + patronymic + " удален из книги");
-                break;
-            } else {
-                if (i == (employees.length - 1)) {
-                    System.out.println("ОШИБКА: Сотрудник " + surname + " " + name + " " + patronymic + " не найден");
-                }
+                return;
             }
         }
+        System.out.println("ОШИБКА: Сотрудник " + surname + " " + name + " " + patronymic + " не найден");
     }
 
     // Изменение зарплаты сотрудника
 
     public void changeEmployeeSalary(String surname, String name, String patronymic, double newSalary) {
         for (int i = 0; i < employees.length; i++) {
-            if (employees[i].getSurname().equals(surname) & employees[i].getName().equals(name) && employees[i].getPatronymic().equals(patronymic)) {
+            if (employees[i] != null & employees[i].getSurname().equals(surname) & employees[i].getName().equals(name) && employees[i].getPatronymic().equals(patronymic)) {
                 employees[i].setSalary(newSalary);
-                break;
-            } else {
-                if (i == (employees.length - 1)) {
-                    System.out.println("ОШИБКА: Сотрудник " + surname + " " + name + " " + patronymic + " не найден");
-                }
+                return;
             }
         }
+        System.out.println("ОШИБКА: Сотрудник " + surname + " " + name + " " + patronymic + " не найден");
     }
 
     // Изменение отдела сотрудника
 
     public void changeEmployeeDepartment(String surname, String name, String patronymic, String newDepartment) {
         for (int i = 0; i < employees.length; i++) {
-            if (employees[i].getSurname().equals(surname) & employees[i].getName().equals(name) && employees[i].getPatronymic().equals(patronymic)) {
+            if (employees[i] != null & employees[i].getSurname().equals(surname) & employees[i].getName().equals(name) && employees[i].getPatronymic().equals(patronymic)) {
                 employees[i].setDepartment(newDepartment);
-                break;
-            } else {
-                if (i == (employees.length - 1)) {
-                    System.out.println("ОШИБКА: Сотрудник " + surname + " " + name + " " + patronymic + " не найден");
-                }
+                return;
             }
         }
+        System.out.println("ОШИБКА: Сотрудник " + surname + " " + name + " " + patronymic + " не найден");
     }
 
     public void printEmployeesFullNameByDepartment() {
